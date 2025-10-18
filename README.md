@@ -1,6 +1,7 @@
 # Website Downloader
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Screenshot]()
 
 **Website Downloader** is a simple tool that allows you to download entire websites, including all their subpages and resources, for offline browsing. Created by **Nowyz**, this tool uses the `wget` utility to fetch web content.
 

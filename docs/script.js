@@ -1,32 +1,14 @@
-const DOWNLOAD_URL = "https://github.com/NowyCodes/Website-Downloader/releases/latest/download/website-downloader-source.zip"
+// If your release ZIP will be named website-downloader-source.zip, leave as is.
+const DOWNLOAD_URL =
+  "https://github.com/NowyCodes/Website-Downloader/releases/latest/download/website-downloader-source.zip"
 
 const downloadPrimary = document.getElementById("downloadPrimary")
+const downloadFloating = document.getElementById("downloadFloating")
 const modal = document.getElementById("downloadModal")
 const modalClose = document.getElementById("modalClose")
 const downloadZip = document.getElementById("downloadZip")
-const themeToggle = document.getElementById("themeToggle")
 
 let lastFocused = null
-
-function initTheme() {
-  const savedTheme = localStorage.getItem("theme") || "light"
-  document.documentElement.setAttribute("data-theme", savedTheme)
-  updateThemeToggleIcon(savedTheme)
-}
-
-function updateThemeToggleIcon(theme) {
-  themeToggle.textContent = theme === "dark" ? "☀️" : "🌙"
-}
-
-function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute("data-theme") || "light"
-  const newTheme = currentTheme === "dark" ? "light" : "dark"
-  document.documentElement.setAttribute("data-theme", newTheme)
-  localStorage.setItem("theme", newTheme)
-  updateThemeToggleIcon(newTheme)
-}
-
-themeToggle.addEventListener("click", toggleTheme)
 
 function openModal() {
   lastFocused = document.activeElement
@@ -48,6 +30,7 @@ function handleKeydown(e) {
 }
 
 downloadPrimary.addEventListener("click", openModal)
+downloadFloating.addEventListener("click", openModal)
 modalClose.addEventListener("click", closeModal)
 modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeModal))
 
@@ -63,5 +46,3 @@ if (!localStorage.getItem("downloadPromptShown")) {
     localStorage.setItem("downloadPromptShown", "1")
   }, 3000)
 }
-
-initTheme()

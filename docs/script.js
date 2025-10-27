@@ -1,5 +1,4 @@
-const DOWNLOAD_URL =
-  "https://github.com/NowyCodes/Website-Downloader/releases/latest/download/website-downloader-source.zip"
+const DOWNLOAD_URL = "https://github.com/NowyCodes/Website-Downloader/releases/latest/download/website-downloader-source.zip"
 
 const downloadPrimary = document.getElementById("downloadPrimary")
 const modal = document.getElementById("downloadModal")

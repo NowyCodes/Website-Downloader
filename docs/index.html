@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nowyz — Download</title>
+  <title>Website Downloader — Download</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-
   <header class="site-header">
     <div class="container">
-      <h1 class="title">Nowyz</h1>
+      <h1 class="title">Website Downloader</h1>
       <p class="tagline">Quickly download sites and exports — fast, reliable.</p>
       <div class="hero-cta">
         <button id="downloadPrimary" class="btn btn-primary">Download</button>
@@ -31,6 +29,10 @@
     </section>
   </main>
 
+  <!-- Added floating CTA button for better UX -->
+  <button id="downloadFloating" class="floating-cta" aria-label="Download">⬇️</button>
+
+  <!-- Modal -->
   <div id="downloadModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
     <div class="modal-backdrop" data-close></div>
     <div class="modal-panel" role="document">
@@ -50,16 +52,6 @@
       </footer>
     </div>
   </div>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>Made by <strong>NowyCodes</strong></p>
-      <div class="social-links">
-        <a href="https://github.com/NowyCodes" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-        <a href="https://www.youtube.com/@Nowyishere" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
-      </div>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
